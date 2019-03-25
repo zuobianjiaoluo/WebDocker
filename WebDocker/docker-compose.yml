@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+      build: .
+      ports:
+       - "5010:80"
+      depends_on:
+       - mysql
+  mysql:
+    container_name: mysql_dc
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    image: mysql
+    ports:
+      - "3306:3306"
