@@ -12,7 +12,7 @@ namespace WebDocker.lib
         public DBService()
         {
             //conn = new MySqlConnection("server=mysql001;User Id=root;password=123456;Database=mysql-db");
-            conn = new MySqlConnection("server=192.168.113.175;User Id=root;password=123456;Database=mysql-db");
+            conn = new MySqlConnection("server=192.168.113.175;User Id=root;password=123456;Database=mysql");
         }
 
         public async Task<T> Single<T>(string sql, object paramPairs = null)
